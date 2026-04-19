@@ -3,254 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WildWest Trading — International Access to US Capital Markets</title>
-  <meta name="description" content="WildWest Trading Ltd. facilitates cross-border access to US equities through regulated clearing infrastructure and digital asset settlement rails." />
-  <meta property="og:title" content="WildWest Trading" />
-  <meta property="og:description" content="International Access to US Capital Markets" />
-  <meta property="og:type" content="website" />
+  <title>WildWest Trading Limited</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* ── Reset & Base ─────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border-color: hsl(214 32% 91%); }
-    html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: hsl(210 33% 99%);
-      color: hsl(215 40% 20%);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
-    }
-    h1, h2, h3 { color: hsl(218 48% 20%); font-weight: 600; letter-spacing: -0.025em; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── Layout ────────────────────────────────────── */
-    .container {
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .max-w-3xl { max-width: 48rem; }
-    .max-w-2xl { max-width: 42rem; }
-
-    /* ── Navbar ────────────────────────────────────── */
-    .navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 50;
-      background: hsl(218 48% 20%);
-      border-bottom: 1px solid hsla(218, 48%, 20%, 0.1);
-    }
-    .navbar .container {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #fafbfc;
+      color: #1a2744;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      height: 4rem;
-    }
-    .navbar-brand {
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.125rem;
-      letter-spacing: -0.025em;
-    }
-    .navbar-links { display: flex; align-items: center; gap: 2rem; }
-    .navbar-links a {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .navbar-links a:hover { color: #fff; }
-
-    /* ── Hero ──────────────────────────────────────── */
-    .hero {
-      padding: 8rem 0 6rem;
-      background: hsl(210 33% 99%);
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.25rem;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-    }
-    .hero p {
-      font-size: 1.125rem;
-      color: hsl(215 17% 47%);
-      line-height: 1.7;
-    }
-
-    /* ── Section Shared ───────────────────────────── */
-    .section { padding: 5rem 0; }
-    .section-alt { background: hsl(210 40% 98%); }
-    .section-white { background: hsl(210 33% 99%); }
-    .section h2 { font-size: 1.875rem; margin-bottom: 2rem; }
-    .section h2.mb-12 { margin-bottom: 3rem; }
-    .body-text { color: hsl(215 17% 47%); font-size: 1rem; line-height: 1.7; }
-    .body-text p + p { margin-top: 1.25rem; }
-    .body-text .label { font-weight: 600; color: hsl(215 40% 20%); }
-
-    /* ── Services Grid ────────────────────────────── */
-    /* .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .service-card {
-      border: 1px solid hsl(214 32% 91%);
-      border-radius: 0.5rem;
       padding: 2rem;
-      background: #fff;
     }
-    .service-card svg {
-      width: 2rem; height: 2rem;
-      color: hsl(218 48% 20%);
-      margin-bottom: 1rem;
-      stroke-width: 1.5;
-    }
-    .service-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-    .service-card p {
-      color: hsl(215 17% 47%);
-      font-size: 1rem;
-      line-height: 1.7;
-    } */
-
-    /* ── Contact ───────────────────────────────────── */
-    .contact { text-align: center; }
-    .contact a:hover { color: hsl(218 48% 20%); }
-
-    /* ── Footer ───────────────────────────────────── */
-    .footer {
-      padding: 1.5rem 0;
-      background: hsl(210 20% 96%);
-      border-top: 1px solid hsl(214 32% 91%);
-      text-align: center;
-    }
-    .footer p {
-      font-size: 0.875rem;
-      color: hsl(215 17% 47%);
-    }
-
-    /* ── Responsive ───────────────────────────────── */
-    @media (min-width: 768px) {
-      .hero h1 { font-size: 3rem; }
-      .hero p  { font-size: 1.25rem; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    /* ── Mobile nav ───────────────────────────────── */
-    @media (max-width: 640px) {
-      .navbar-links { gap: 1rem; }
-      .navbar-links a { font-size: 0.8rem; }
-    }
+    .wrapper { max-width: 420px; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; }
+    p { font-size: 0.95rem; color: #5a6a7e; line-height: 1.6; }
+    a { color: #5a6a7e; }
+    a:hover { color: #1a2744; }
+    .contact { margin-top: 2rem; font-size: 0.85rem; }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="navbar-brand">WildWest Trading</a>
-      <div class="navbar-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#compliance">Compliance</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container max-w-3xl">
-      <h1>International Access to US Capital Markets</h1>
-      <p>WildWest Trading Ltd. facilitates cross-border access to US equities through regulated clearing infrastructure and digital asset settlement rails.</p>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container max-w-3xl">
-      <h2>About WildWest Trading</h2>
-      <div class="body-text">
-        <p>WildWest Trading Ltd. is a British Virgin Islands registered company specializing in enabling international clients to access US equities and exchange-traded funds. We operate as a brokerage intermediary, maintaining omnibus clearing and custody relationships with US-registered broker-dealers and clearing firms.</p>
-        <p>Our infrastructure leverages stablecoin settlement rails for efficient cross-border capital movement, reducing friction and settlement times for international investors. Client assets are held at regulated US clearing firms, segregated through subledger accounting at the omnibus level.</p>
-        <p>WildWest Trading does not provide services to US persons.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <!-- <section id="services" class="section section-white">
-    <div class="container">
-      <h2 class="mb-12">What We Do</h2>
-      <div class="services-grid">
-
-        <div class="service-card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-          <h3>US Equities Access</h3>
-          <p>We provide international clients with access to US-listed equities and ETFs through our correspondent clearing relationships with US-registered broker-dealers.</p>
-        </div>
-
-        <div class="service-card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-          <h3>Omnibus Clearing &amp; Custody</h3>
-          <p>Client assets are custodied at US-registered clearing firms under an omnibus account structure with per-client subledger tracking and daily reconciliation.</p>
-        </div>
-
-        <div class="service-card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
-          <h3>Stablecoin Settlement</h3>
-          <p>We utilize USDC-based settlement rails for cross-border capital movement, enabling faster deposits and lower transaction costs compared to traditional wire transfers.</p>
-        </div>
-
-        <div class="service-card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-          <h3>Institutional Infrastructure</h3>
-          <p>Our platform is built on institutional-grade technology including multi-party computation (MPC) key management, automated compliance screening, and real-time position tracking.</p>
-        </div>
-
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Compliance -->
-  <section id="compliance" class="section section-alt">
-    <div class="container max-w-3xl">
-      <h2>Compliance &amp; Risk Management</h2>
-      <div class="body-text">
-        <p>WildWest Trading maintains a robust compliance program designed to meet international regulatory standards.</p>
-        <p><span class="label">KYC/AML Program</span> — All clients undergo identity verification and anti-money laundering screening before account activation. We utilize industry-leading verification providers with ongoing transaction monitoring.</p>
-        <p><span class="label">Transaction Screening</span> — All transactions are screened against global sanctions lists and monitored for suspicious activity through automated compliance systems.</p>
-        <p><span class="label">Asset Segregation</span> — Client assets are held at US-registered clearing and custody providers. Client balances are tracked through subledger accounts within our omnibus structure, ensuring clear attribution and auditability.</p>
-        <p><span class="label">Restricted Jurisdictions</span> — WildWest Trading does not provide services to US persons or residents of OFAC-sanctioned jurisdictions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section section-white contact">
-    <div class="container max-w-2xl">
-      <h2>Contact</h2>
-      <div class="body-text">
-        <p><span class="label">Email: </span><a href="mailto:admin@wildwesttrading.xyz">admin@wildwesttrading.xyz</a></p>
-        <p><span class="label">Registered Office: </span>Keyway Chambers, 3rd Floor, Akara Building, Road Town, Tortola, VG1110, British Virgin Islands</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 WildWest Trading Ltd. Registered in the British Virgin Islands. All rights reserved.</p>
-    </div>
-  </footer>
-
+  <div class="wrapper">
+    <h1>WildWest Trading Limited</h1>
+    <p>A BVI-registered proprietary trading firm.</p>
+    <p class="contact"><a href="mailto:admin@wildwesttrading.xyz">admin@wildwesttrading.xyz</a></p>
+  </div>
 </body>
 </html>
+ 
